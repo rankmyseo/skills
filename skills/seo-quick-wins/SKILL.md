@@ -1,6 +1,6 @@
 ---
 name: seo-quick-wins
-description: A focused push on the pages and keywords closest to earning more clicks, run as a short sprint of up to ten items. Finds keywords at positions 4 to 20, pages shown often but rarely clicked, and pages sliding down, ranks them by impact and effort, plans the sprint with the owner, and compares before and after. Use when the owner wants faster results than the weekly three actions, or asks for quick wins.
+description: A sprint of up to ten changes on pages that are close to earning more clicks: keywords at positions 4 to 20, and pages shown often but rarely clicked. Ranks them by impact and effort, plans the sprint with the owner, and compares before and after. Use when the owner asks for quick wins, or has time for more than the weekly three actions. Pages that are losing clicks go to seo-content-refresh.
 ---
 
 # SEO quick wins
@@ -17,7 +17,7 @@ The weekly review (`seo-maintenance-loop`) picks three actions. This skill is fo
 
 RankMySEO steps need Starter or above. Without RankMySEO, use Search Console directly and skip the tracked-rank rows.
 
-1. `page_updates`: read the rows marked `tune` (positions 4 to 10), `expand` (11 to 20), and `refresh` (a keyword slid over the last three checks). Skip `wait` rows, which changed in the last six weeks, and leave `keep` pages alone.
+1. `page_updates`: read the rows marked `tune` (positions 4 to 10) and `expand` (11 to 20). Skip `wait` rows, which changed in the last six weeks, and leave `keep` pages alone. Rows marked `refresh` are pages that are losing clicks. Leave them out of the sprint and tell the owner that `seo-content-refresh` plans them.
 2. When Search Console is connected, `page_updates` also flags pages shown often but rarely clicked, and pages on page two with real impressions. Take those too.
 3. `list_keywords`: tracked keywords at positions 4 to 20, with volume.
 4. `search_console` for 28 days: queries with many impressions and few clicks at a position that should earn clicks.
@@ -53,7 +53,6 @@ For each item, list four to six short tasks. Typical tasks by signal:
 
 - **Tune (4 to 10):** answer the search in the first paragraph, tighten the title and description (`seo-page-rewrite`), add two internal links from related pages with plain anchor text.
 - **Expand (11 to 20):** add the section the reader is missing, check the title and H1 name the keyword in plain words, link to the page from the hub.
-- **Refresh:** update facts and dates that changed, then follow `seo-content-refresh`.
 - **Shown but rarely clicked:** rewrite the title and description only. Leave the body alone.
 
 Each item gets one check: the keyword's tracked position, or the page's Search Console clicks, and the date to look again.

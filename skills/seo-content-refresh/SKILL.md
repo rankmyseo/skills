@@ -1,6 +1,6 @@
 ---
 name: seo-content-refresh
-description: Fix pages that are losing clicks and clean up pages that earn nothing. Finds declining and underperforming pages, works out why each one slipped, writes a refresh plan per page, and decides for pages with no search visibility whether to refresh, merge, redirect, or remove them. Use when the owner asks to refresh old content, when pages are sliding, or when the site has many pages no one finds.
+description: Fix pages that are losing clicks and clean up pages that earn nothing. Finds the pages that slipped, works out why each one did, writes a refresh plan per page, and decides for pages with no search visibility whether to refresh, merge, redirect, or remove them. Use when the owner asks to refresh old content, when pages the owner can name or count are sliding in clicks or ranks, or when the site has many pages no one finds. For a fall across the whole site, a section, or a page type, use seo-traffic-drop.
 ---
 
 # Content refresh and cleanup

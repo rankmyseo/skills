@@ -22,7 +22,7 @@ For every URL in the batch:
 - Listed in the sitemap, with an accurate `lastmod`.
 - Linked from at least one indexed page, such as the homepage or a hub. A page with no links is hard to find.
 - Allowed by robots.txt for search crawlers.
-- Schema validates with zero errors, and every control has an accessible name (see `seo-site-setup`).
+- Schema validates with zero errors (`seo-site-setup`), and every control has an accessible name (`seo-agent-readiness`, section 3).
 
 If a URL fails a check, fix it or pull it from the batch, and tell the owner before you go on.
 

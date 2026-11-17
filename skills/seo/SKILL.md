@@ -1,6 +1,6 @@
 ---
 name: seo
-description: Start here for any SEO request on a website, or when the owner types /seo with a command such as plan, setup, check, wins, rivals, or drop. Routes a site owner through planning, setup, launch checks, local search, product pages, quick wins, content refresh, competitors, trends, rival teardowns, AI answers, a 90-day roadmap, and ongoing maintenance using RankMySEO tools, Search Console, and GA4. Use when someone asks to create, launch, check, or improve a site's search presence.
+description: Start here for any SEO request on a website, or when the owner types /seo with a command such as plan, setup, check, wins, rivals, or drop. Routes a site owner to the right skill for planning, setup, AI crawlers and agents, launch checks, local search, product pages, the weekly review, traffic drops, quick wins, content refresh, competitors, rival teardowns, trends, AI answers, a 90-day roadmap, and reports, using RankMySEO tools, Search Console, and GA4. Use when someone asks to create, launch, check, or improve a site's search presence.
 ---
 
 # RankMySEO SEO agent
@@ -11,72 +11,52 @@ RankMySEO does not build pages. You do the SEO work yourself: plan, write, and e
 
 ## Commands
 
-The owner can type `/seo`, a command, and an optional site, page, or keyword. Read the command, then the file it names. If there is no site and you need one, ask for it.
+The owner can type `/seo`, a command, and an optional site, page, or keyword. Or they can ask in plain words. Find the row, then read the file it names. If there is no site and you need one, ask for it.
 
-| Command | What it does | Read |
+| Command | Use when the owner says, or the data shows | Read |
 | --- | --- | --- |
-| `/seo plan <idea or site>` | Research and plan a new site before it is built | `seo-launch-plan` |
-| `/seo keywords [site]` | Choose the next keywords to target | `seo-keyword-selection` |
-| `/seo brief <keyword>` | Brief one new page and list the facts the owner must supply | `seo-page-brief` |
-| `/seo write <page or keyword>` | Write or rewrite a page's title, description, and copy | `seo-page-rewrite` |
-| `/seo setup [site]` | Technical and on-page setup while the site is built or fixed | `seo-site-setup` |
-| `/seo local [site]` | Business profile, reviews, and location pages for a place customers visit or a service area | `seo-local` |
-| `/seo product [site or page]` | Product and category pages, variants, Product markup, and Merchant Center | `seo-product-pages` |
-| `/seo launch [site]` | First-month checks after the site goes live | `seo-go-live-check` |
-| `/seo release [site]` | Before and after a redesign, a move, or a template change | `seo-go-live-check`, section "Redesigns and releases" |
-| `/seo index [pages]` | Hand off a batch of new or changed pages for indexing | `seo-indexing` |
-| `/seo audit <site>` | First look at a site that is already live | `seo-existing-site` |
-| `/seo check [site]` | The weekly review, ending in three actions | `seo-maintenance-loop` |
-| `/seo drop [site]` | Find why clicks, visits, or ranks fell | `seo-maintenance-loop`, section "When traffic or ranks drop" |
-| `/seo wins [site]` | A short sprint on the keywords and pages closest to more clicks, with before and after | `seo-quick-wins` |
-| `/seo refresh [site or page]` | Plan fixes for pages that are losing clicks | `seo-content-refresh` |
-| `/seo prune [site]` | Decide what to do with pages that earn nothing | `seo-content-refresh`, section "Pages that earn nothing" |
-| `/seo rivals [site]` | Find search rivals, benchmark them, and watch what they change | `seo-competitors` |
-| `/seo reverse <rival site>` | Take apart one rival's winning pages, their primary and sub-keywords, and the moves to copy | `seo-reverse-engineer` |
+| `/seo plan <idea or site>` | Wants a new site, or has an idea but no keywords yet | `seo-launch-plan` |
+| `/seo keywords [site]` | Choosing which keywords to target, for a new or an existing site | `seo-keyword-selection` |
+| `/seo brief <keyword>` | A new page to write from zero: the brief, and the facts the owner must supply | `seo-page-brief`, then `seo-page-rewrite` |
+| `/seo write <page or keyword>` | New copy, a title, or a description for a page that exists | `seo-page-rewrite` |
+| `/seo setup [site]` | The site is being built or fixed: technical and on-page setup | `seo-site-setup` |
+| `/seo agents [site]` | Asks about AI crawlers, blocking AI training, llms.txt, or whether agents can use the site | `seo-agent-readiness` |
+| `/seo local [site]` | Customers visit a place, or the business travels to them | `seo-local` |
+| `/seo product [site or page]` | The site sells products online | `seo-product-pages` |
+| `/seo launch [site]` | The site went live in the last few weeks | `seo-go-live-check` |
+| `/seo release [site]` | A redesign, a move, or a template change is planned or just shipped | `seo-go-live-check`, section "Redesigns and releases" |
+| `/seo index [pages]` | A batch of pages is ready to be indexed, or new pages are not showing in search | `seo-indexing` |
+| `/seo audit <site>` | A live site that you have not seen before | `seo-existing-site` |
+| `/seo check [site]` | A weekly or monthly review, or the owner asks what to do next and names no page and no spare time | `seo-maintenance-loop` |
+| `/seo drop [site]` | Clicks, visits, or ranks fell across the whole site, a section, or a page type (such as every blog post) | `seo-traffic-drop` |
+| `/seo wins [site]` | Asks for quick wins or faster results, or has spare time for more than the weekly three actions | `seo-quick-wins` |
+| `/seo refresh [site or page]` | Pages the owner can name or count (one page, three pages) are losing clicks or ranks, or are out of date | `seo-content-refresh` |
+| `/seo prune [site]` | Pages that earn nothing | `seo-content-refresh`, section "Pages that earn nothing" |
+| `/seo rivals [site]` | Asks who they compete with, what rivals do better, or what rivals changed | `seo-competitors` |
+| `/seo reverse <rival site>` | Asks how one rival wins, or what a rival's best pages rank for | `seo-reverse-engineer` |
 | `/seo gaps [site]` | Keywords and topics rivals win that the site misses | `seo-competitors`, sections "Keyword gaps" and "Content gaps" |
-| `/seo trends [site or topic]` | Rising, falling, and seasonal searches, checked against social and news | `seo-trends` |
-| `/seo ai [site]` | Whether AI answers name the site or cite its pages, and what to change | `seo-ai-visibility` |
-| `/seo roadmap [site]` | A 90-day plan with goals, initiatives, and 30, 60, and 90 day milestones | `seo-roadmap` |
-| `/seo report [week, month, or exec]` | The owner's report, the executive summary, and the change log | `seo-reporting` |
-| `/seo data [question]` | What a Search Console or GA4 number means | `seo-search-data` |
-| `/seo goals` | Turn the owner's leads or sales into GA4 key events | `seo-conversion-tracking` |
+| `/seo trends [site or topic]` | Asks what people search for now, or when to publish seasonal pages | `seo-trends` |
+| `/seo ai [site]` | Asks about AI search, ChatGPT, GEO (the name for getting into AI answers), or why AI names a rival | `seo-ai-visibility` |
+| `/seo roadmap [site]` | Asks for a strategy or a plan for the next quarter | `seo-roadmap` |
+| `/seo report [week, month, or exec]` | A change was made, or the weekly, monthly, or executive report is due | `seo-reporting` |
+| `/seo data [question]` | Asks how the site is doing, or what a number means | `seo-search-data` |
+| `/seo goals` | The owner defines what counts as a lead, sign-up, or sale | `seo-conversion-tracking` |
 
-- `/seo` alone, or `/seo help`: show this table in plain words and ask what the owner wants to do.
-- A command that is not in the table: name the closest one and ask before you start.
-- No command, only a question, such as "why did my visits fall?": pick the phase below by meaning.
+- `/seo` alone, or `/seo help`: list the commands in plain words and ask what the owner wants to do.
+- No command, only a question, such as "why did my visits fall?": match it to the middle column.
+- A command or a question that fits no row: name the closest row and ask before you start.
 
-## Pick the phase
+When two rows seem to fit:
 
-| The owner says, or the data shows | Phase | Read next |
-| --- | --- | --- |
-| Wants a new site, or has an idea but no keywords yet | Plan | `seo-launch-plan` |
-| The site is being built or fixed | Setup | `seo-site-setup` |
-| The site went live in the last few weeks, or a redesign or move is planned | Go-live | `seo-go-live-check` |
-| Customers visit a place, or the business travels to them | Local | `seo-local` |
-| The site sells products online | Products | `seo-product-pages` |
-| Clicks, visits, or ranks fell | Drop | `seo-maintenance-loop` |
-| Asks for quick wins, or wants more than the weekly three actions | Quick wins | `seo-quick-wins` |
-| Pages are sliding, are out of date, or earn nothing | Refresh | `seo-content-refresh` |
-| Asks who they compete with, or what rivals do better | Rivals | `seo-competitors` |
-| Asks how one rival wins, or what a rival's best pages rank for | Reverse engineer | `seo-reverse-engineer` |
-| Asks what people search for now, or when to publish seasonal pages | Trends | `seo-trends` |
-| Asks about GEO, AI search, ChatGPT, or why AI names a rival | AI answers | `seo-ai-visibility` |
-| Asks for a strategy or a plan for the next quarter | Roadmap | `seo-roadmap` |
-| A batch of pages is ready to be indexed, or new pages are not showing in search | Indexing | `seo-indexing` |
-| A site that is already live and that you have not seen before | Baseline | `seo-existing-site` |
-| Choosing which keywords to target, for a new or an existing site | Keywords | `seo-keyword-selection` |
-| A new page to write from zero | Brief | `seo-page-brief`, then `seo-page-rewrite` |
-| The owner defines what counts as a lead, sign-up, or sale | Measure | `seo-conversion-tracking` |
-| A change was made, or it is time for the weekly or monthly report | Report | `seo-reporting` |
-| Asks how the site is doing, or what a number means | Read data | `seo-search-data` |
-| Asks what to do next, or it is a recurring check | Maintain | `seo-maintenance-loop` |
-| Asks for new copy, a title, or a description on a page that exists | Write | `seo-page-rewrite` |
+- A site that is not built yet starts with `seo-launch-plan`, even for a local shop or an online store. The plan sends the owner on to `seo-local` or `seo-product-pages`.
+- One named rival in depth is `seo-reverse-engineer`. The set of rivals is `seo-competitors`.
+- Whether AI tools can read the site is `seo-agent-readiness`. Whether AI answers name it is `seo-ai-visibility`.
 
-Read one phase file at a time. A single question, such as "how are my ranks?", needs one or two tool calls, not the whole loop.
+Read one file at a time. A single question, such as "how are my ranks?", needs one or two tool calls, not a full weekly review.
 
 ## First calls in every session (RankMySEO users)
 
-If the owner does not use RankMySEO, skip these and go to the phase file. Say that tracked rank is not available.
+If the owner does not use RankMySEO, skip these and go to the file the table names. Say that tracked rank is not available.
 
 1. `account_status`: the plan, what is used, what is left, and which features the plan unlocks. Take plan limits from this response only. Do not quote them from memory.
 2. `list_projects` when you do not know the site. Pass its name or website as `project`.
@@ -86,19 +66,11 @@ If a tool refuses, call `account_status`. Tell the owner the reason, when the ne
 
 ## Guest sessions
 
-A guest key can add one site and two keywords for 48 hours. For anything more, call `request_link` and have the owner open the link it returns. Guest-locked tools say so. Do not work around them.
-
-## Cadence
-
-- Weekly review: one full maintenance round, ending in three actions.
-- Monthly summary: the same loop over 28 days, compared with the 28 days before.
-- Daily digest: only if Google Analytics or Search Console is connected. It reports, and it proposes no daily actions.
-
-Read `seo-maintenance-loop` for the details.
+A guest key can add one site and two keywords for 48 hours. For anything more, call the `request_link` tool. It returns a link. When the owner opens it and approves, the same key works on their plan. Guest-locked tools say so. Do not work around them.
 
 ## What you can do, and what the owner does
 
-The agent can read RankMySEO data, and it can read Search Console and GA4 through RankMySEO or a direct connector. It cannot submit sitemaps or request indexing in Google Search Console or Bing, and it cannot connect Google Business Profile. Those are owner steps. The agent can send an IndexNow request only with the owner's key and yes. Check the current capability list in `seo-indexing` before you tell an owner what you can do.
+The agent can read RankMySEO data, and it can read Search Console and GA4 through RankMySEO or a direct connector. It cannot submit sitemaps or request indexing in Google Search Console or Bing, and it cannot connect Google Business Profile. Those are owner steps. The agent can send an IndexNow request (a notice to Bing and other engines that pages changed) only with the owner's key and yes. Check the current capability list in `seo-indexing` before you tell an owner what you can do.
 
 ## Data sources
 

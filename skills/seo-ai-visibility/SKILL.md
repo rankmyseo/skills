@@ -85,13 +85,13 @@ Already covered, so link, do not repeat: crawl and index checks, canonical URLs,
 
 Check these here:
 
-- **AI crawlers are not blocked.** Read `robots.txt` and the rules in `seo-site-setup`, section 6. A blocked crawler cannot cite the page.
+- **AI crawlers are not blocked.** Read `robots.txt` and the rules in `seo-agent-readiness`, section 1. A blocked crawler cannot cite the page.
 - **The facts are on the page, in plain HTML.** What the business sells, for whom, where, how much or how to start, and how to contact it. Facts only in an image, a script, or a PDF are easy to miss.
 - **Each section answers one question.** A heading that names the question, then the answer in the first lines, then the detail. This is good writing for any reader. Google says no special format, markup, or file is needed for its AI features, so do not promise a lift from reformatting.
 - **One identity everywhere.** The same name, description, address, phone, and key facts on the site, the Business Profile, and the social and directory pages the owner controls. A brand that is described two ways gets described wrongly. `seo-local` section 2 has the details.
 - **Credibility the reader can check.** A named author or business, dates that are true, and sources for numbers.
 
-If the owner wants an `llms.txt`, follow `seo-site-setup`, section 8, and do not promise citations from it.
+If the owner wants an `llms.txt`, follow `seo-agent-readiness`, section 2, and do not promise citations from it.
 
 ## 8. Google's AI features
 

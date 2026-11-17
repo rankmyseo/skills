@@ -1,6 +1,6 @@
 ---
 name: seo-local
-description: Local search for a business that customers visit, or that travels to customers in a set area. Covers the Google Business Profile the owner sets up, matching name, address, and phone on the site, asking for reviews within Google's rules, location and service-area pages, and LocalBusiness markup. Use when the business has a shop, office, clinic, or service area, or when the owner asks about Google Maps, map results, or reviews.
+description: Local search for a business that customers visit, or that travels to customers in a set area. Covers the Google Business Profile the owner sets up, matching name, address, and phone on the site, asking for reviews within Google's rules, location and service-area pages, and LocalBusiness markup. Use when the business has a shop, office, clinic, or service area, or when the owner asks about Google Maps, map results, or reviews. For a site that is not built yet, start with seo-launch-plan, which sends local businesses here.
 ---
 
 # SEO local

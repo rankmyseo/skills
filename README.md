@@ -60,6 +60,7 @@ Type `/seo`, a command, and a site, page, or keyword. `/seo` alone lists the com
 | `/seo brief <keyword>` | Brief one new page and list the facts the owner must supply |
 | `/seo write <page or keyword>` | Write or rewrite a page's title, description, and copy |
 | `/seo setup [site]` | Technical and on-page setup while the site is built or fixed |
+| `/seo agents [site]` | AI crawler choices, llms.txt, and names that agents and screen readers can read |
 | `/seo local [site]` | Business profile, reviews, and location pages |
 | `/seo product [site or page]` | Product and category pages, variants, Product markup, and Merchant Center |
 | `/seo launch [site]` | First-month checks after the site goes live |
@@ -97,7 +98,7 @@ flowchart TD
     E2 --> E3["Keywords from search data"]
     E3 --> E4["Competing pages check"]
     E4 --> E5["Gate: owner approves keep, refresh, merge, redirect"]
-    N6 --> BLD["Build: HTML, accessible names, robots, sitemap, schema, speed"]
+    N6 --> BLD["Build: HTML, robots, sitemap, schema, speed, then AI crawlers and accessible names"]
     E5 --> BLD
     BLD -->|"Place or service area"| LOC["Local: business profile, reviews, location pages"]
     LOC --> CONV
@@ -123,9 +124,9 @@ flowchart TD
     ACT -->|"Check after two weekly checks or four weeks"| WK
 ```
 
-## The 22 skills
+## The 24 skills
 
-Start with `seo`. It reads the command or the question, picks the phase, and sends the agent to one skill at a time.
+Start with `seo`. It reads the command or the question and sends the agent to one skill at a time. Each kind of request has one owner, so two skills do not claim it: a review on a schedule, a fall across the site, pages losing clicks, and pages close to the top each have one owner.
 
 | Skill | Phase | Use when |
 | --- | --- | --- |
@@ -135,16 +136,18 @@ Start with `seo`. It reads the command or the question, picks the phase, and sen
 | `seo-existing-site` | Baseline | A live site the agent has not seen: inventory, keep, refresh, merge, redirect |
 | `seo-page-brief` | Build | A brief for each new page, and the owner facts that must arrive first |
 | `seo-page-rewrite` | Build or maintain | An existing page needs new copy, title, or description |
-| `seo-site-setup` | Build | Rendering, HTML, accessible names, robots and AI crawlers, sitemap, schema, speed, measurement |
+| `seo-site-setup` | Build | Rendering, HTML, on-page basics, robots.txt, sitemap, schema, speed, images, languages, measurement |
+| `seo-agent-readiness` | Build | The owner's AI crawler choices in robots.txt, llms.txt with an honest label, accessible names, and the agent reference scans |
 | `seo-local` | Build or maintain | A place customers visit or a service area: business profile, reviews, location pages |
 | `seo-product-pages` | Build or maintain | An online shop: product and category pages, variant and filter URLs, Product markup, Merchant Center |
 | `seo-conversion-tracking` | Measure | Turning the owner's lead definition into GA4 key events, without personal data |
 | `seo-go-live-check` | Launch | The first month after a site first goes live, and before and after a redesign or move |
 | `seo-indexing` | Launch | A finished batch of new pages is ready to submit to Google, Bing, and IndexNow |
 | `seo-reporting` | Report | The change log, the weekly and monthly owner report, and the executive summary |
-| `seo-maintenance-loop` | Maintain | The weekly review, monthly summary, daily digest, three actions, and traffic drops |
+| `seo-maintenance-loop` | Maintain | The weekly review, monthly summary, and daily digest, ending in three actions |
+| `seo-traffic-drop` | Maintain | Why clicks, visits, or ranks fell: where it sits, then tracking, own changes, Google updates, rivals, the market, and intent |
 | `seo-search-data` | Maintain | Reading Search Console and GA4 without over-reading them |
-| `seo-quick-wins` | Grow | A sprint of up to ten changes on keywords at positions 4 to 20 and pages shown but rarely clicked, with before and after |
+| `seo-quick-wins` | Grow | A sprint of up to ten changes on pages close to more clicks: keywords at positions 4 to 20 and pages shown but rarely clicked, with before and after |
 | `seo-content-refresh` | Grow | Pages losing clicks, competing pages, and pages that earn nothing: refresh, merge, redirect, or remove |
 | `seo-competitors` | Grow | Search rivals, benchmarks, keyword and content gaps, a monthly watch, and a rival's ads |
 | `seo-reverse-engineer` | Grow | One rival's winning pages, the primary and sub-keywords behind each, brand versus non-brand traffic, the pages that link to it, and the moves to copy |
@@ -207,7 +210,7 @@ Checked on 24 October 2026 against the tools connected to this session.
 
 ## Out of scope for this set
 
-Managing social accounts, paid search budgets and bids, the Operator shop, Operator AI, paid link building, fake or incentivized reviews, and Indonesian copy by default. Social research is used only as an optional signal, after the owner's yes, because each new answer spends lookups: while planning (`seo-launch-plan`), for trends (`seo-trends`), for a rival's ads (`seo-competitors`), and for marketplace search terms (`seo-product-pages`). Add the rest later as their own skills.
+Managing social accounts, paid search budgets and bids, the Operator shop, Operator AI, paid link building, fake or incentivized reviews, and Indonesian copy by default. Social research is used only as an optional signal, after the owner's yes, because each new answer spends lookups: while choosing keywords (`seo-keyword-selection`), for trends (`seo-trends`), for a rival's ads (`seo-competitors`), and for marketplace search terms (`seo-product-pages`). Add the rest later as their own skills.
 
 ## Layout
 

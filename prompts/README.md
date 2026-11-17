@@ -28,7 +28,7 @@ Most prompts need the Starter plan or above. Ask the assistant to run `account_s
 | [Capture quick wins](capture-quick-wins.md) | Find quick wins · Plan a two-week sprint · Measure the sprint | `seo-quick-wins` |
 | [Refresh and clean up pages](refresh-and-clean-up.md) | Refresh slipping pages · Pages that earn nothing | `seo-content-refresh` |
 | [Write briefs that fit the results](write-briefs.md) | Brief a new page | `seo-page-brief` |
-| [Diagnose a traffic drop](diagnose-a-drop.md) | Find where it fell · Find why | `seo-maintenance-loop` |
+| [Diagnose a traffic drop](diagnose-a-drop.md) | Find where it fell · Find why | `seo-traffic-drop` |
 | [Improve product pages](improve-product-pages.md) | Pick the products · Fix the pages | `seo-product-pages` |
 | [Build a 90-day roadmap](build-a-roadmap.md) | Gather, prioritize, and plan | `seo-roadmap` |
 | [Report to a manager or client](report-to-a-manager.md) | Executive summary · Decision memo | `seo-reporting` |

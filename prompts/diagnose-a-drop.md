@@ -1,6 +1,6 @@
 # Diagnose a traffic drop
 
-Find where clicks or ranks fell before guessing why. Skill: `seo-maintenance-loop`, section "When traffic or ranks drop".
+Find where clicks or ranks fell before guessing why. Skill: `seo-traffic-drop`.
 
 ## Workflow: Find where it fell
 

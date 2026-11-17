@@ -1,6 +1,6 @@
 ---
 name: seo-maintenance-loop
-description: The recurring check for a live website. Finds the few opportunities worth acting on this week (keywords near the top, pages to refresh or merge, pages with search demand but weak clicks, on-page issues, competitor gaps, link changes), ranks them, and gives the owner three actions. Also covers finding why traffic or ranks dropped. Use for weekly or monthly reviews, when the owner asks what to fix or write next, or when clicks, visits, or ranks fell.
+description: The recurring review for a live website, weekly or monthly. Reads the account, tracked ranks, Search Console, on-page issues, rivals, and links, picks the three actions worth doing this round, and hands each one to the skill that owns it. Use for a weekly or monthly review, or when the owner asks what to fix or write next. For a fall in traffic use seo-traffic-drop, for a sprint of more than three actions use seo-quick-wins, and for pages that are losing clicks use seo-content-refresh.
 ---
 
 # SEO maintenance loop
@@ -72,28 +72,9 @@ Rank the candidates by impact first, then effort:
 - **Why:** the number you saw, its source, and its window.
 - **Check:** what to look at, and when. Use two weekly checks or four weeks of Search Console data, whichever is later.
 
-## When traffic or ranks drop
+## When the round shows a drop
 
-Use this when the owner says visits, clicks, or ranks fell, or when the weekly round shows a drop. Find where it fell before you guess why.
-
-1. **Confirm it.** Use one source, complete days, and the same weekdays in both windows. Compare with the same weeks last year when Search Console has them, to rule out a seasonal dip.
-2. **Find where.** In Search Console, split by page, query, country, device, and search type (web, image, video, news). One page, one section, and the whole site point to different causes. RankMySEO's `search_console` gives pages (with `clicksChange` when `pagesComparable` is true), queries for one window, and the daily series; the country, device, and search type splits need Search Console itself, through the owner or a direct connector. Sort pages and queries by the absolute number of clicks lost, not by percentage; a small page that lost 80% can matter less than a big one that lost 10%.
-3. **Check the tracking.** If GA4 visits fell and Search Console clicks did not, suspect the tag or the cookie banner before search.
-4. **Check your own changes.** Read the change log (`seo-reporting`) for the window. A redesign, a move, or a template change points to the release check in `seo-go-live-check`.
-5. **Check Google.** Open the Google Search Status Dashboard (status.search.google.com) for a ranking update or an incident in the window. If an update is still rolling out, wait. Google advises waiting at least a full week after it finishes, then comparing a week after with a week before it started.
-6. **Check what Google sees.** On the pages that fell: status code, `noindex`, canonical, and robots.txt. Ask the owner to open the Page indexing, Manual actions, and Security issues reports in Search Console if you cannot reach them. In RankMySEO, run `site_issues`.
-7. **Check rivals.** `keyword_history` on the keywords that fell, then `rank_compare` to see who passed the site.
-8. **Check the market.** If saved rivals fell too (the `months` series in `competitor_traffic`, same months as the drop), the drop is likely seasonal or market-wide, not something the site did. Check demand with `seo-trends` before changing pages.
-9. **Check the intent.** Look at what ranks now for the keywords that fell, if you can search, or ask the owner. If the results show a different kind of page than before (guides where there were product pages, or the reverse), the searcher's intent shifted. Reshape the page with `seo-page-rewrite` rather than adding more of the same.
-
-How to act on it:
-
-- A small drop on a page that still ranks well, such as position 2 to 4, needs no big change. Google advises against changing pages that already perform well.
-- A large drop after a core update calls for the people-first checks in `seo-page-rewrite` on the pages that fell most, and on the site as a whole. Do not make quick fixes such as removing an element because someone said it hurts SEO.
-- Deleting pages is a last resort. Propose it only for pages written for search and not for people, and only with the owner's yes.
-- Recovery after a core update can take months. Say so, and set the next check date.
-
-Report what fell, where, the most likely cause and the evidence for it, what you could not check, and at most three actions.
+If clicks, visits, or ranks fell across the site or a section, stop the round and use `seo-traffic-drop`. Find where it fell before you pick actions.
 
 ## Checking AI answers (optional)
 

@@ -1,6 +1,6 @@
 ---
 name: seo-site-setup
-description: Technical and on-page setup for a website that is being built or fixed. Covers rendering, HTML structure, on-page basics, link attributes, robots.txt and AI crawler choices, sitemap naming, llms.txt, structured data validation, speed, languages, and measurement. Use before a site goes live, or when the owner asks what is missing.
+description: Technical and on-page setup for a website that is being built or fixed. Covers rendering, HTML structure, on-page basics, link attributes, robots.txt, sitemap naming, structured data validation, speed, images, languages, and measurement. For AI crawler rules, llms.txt, and accessible names, use seo-agent-readiness. Use before a site goes live, or when the owner asks what is missing.
 ---
 
 # SEO site setup
@@ -9,7 +9,7 @@ Read `seo` first if you have not read it in this session. Its rules for account 
 
 Goal: search engines and AI tools can read every public page, every page says what it is, the markup validates, and the owner can measure it from day one.
 
-Acceptance: for any public page, the owner can see the title, description, one H1, canonical link, and main text in the raw HTML. The schema validates with no errors. robots.txt matches the owner's answers.
+Acceptance: for any public page, the owner can see the title, description, one H1, canonical link, and main text in the raw HTML. The schema validates with no errors. robots.txt allows search crawlers and points to the sitemap.
 
 Make the changes yourself, in the files or builder you can reach. If you cannot reach the site, write each change out exactly (where it goes, the old value, the new value, and the reason) and give it to the owner. If you do not know the stack, ask once.
 
@@ -35,26 +35,7 @@ Make the changes yourself, in the files or builder you can reach. If you cannot 
 - Every form input has a label. Every informative image has alt text. Decorative images get empty alt.
 - Include the viewport meta tag so the page works on phones.
 - Use real tables for tables and real lists for lists.
-
-## 3b. Accessible names and ARIA (WCAG, and what agents read)
-
-Why this matters for search and AI: WCAG requires every control to have a programmatic name and role. Browser agents read the page's accessibility tree, which holds those names and roles, to find buttons, links, and fields. A control with no name is invisible to both assistive technology and agents.
-
-- **Use native HTML first.** A `button` already has keyboard support, a role, and states. A `div` with `role="button"` needs all of that rebuilt by hand. The first rule of ARIA is to use a native element when one fits.
-- **Button with visible text:** the text is the name. Nothing else is needed.
-- **Icon-only button:** add `aria-label` that names the function ("Close", "Add to cart"). Set the icon's SVG to `aria-hidden="true"`.
-- **Link:** the link text says where it goes. Avoid "read more" and "click here". An icon-only link gets an `aria-label`.
-- **Form input:** a `label` element linked with `for` and `id`. Placeholder text is not a label.
-- **Image:** informative images get alt text that describes them. Decorative images get empty alt.
-- **Match visible text:** when a control shows visible text, its accessible name must contain that text, with the visible words first (WCAG 2.5.3, Label in Name). A visible "Search" button named "Find products" fails for voice users who say "Search".
-- **Name the function, not the look.** Name an X icon "Close". Start action names with a verb ("Edit John Doe"). Do not repeat the role in the name, so no "button" or "link" in the text.
-- **aria-labelledby or aria-label:** if the label text already appears on the page, point to it with `aria-labelledby`. Use `aria-label` only when no visible text exists. Do not use both on one element.
-- **Do not put `aria-label` on elements that prohibit naming,** such as paragraphs, spans, and plain divs.
-- **Custom widgets** (menus, tabs, accordions, dialogs) need the right role, plus states such as `aria-expanded`, `aria-controls`, and `aria-selected` that update as the widget changes. Keep focus visible, and keep every control usable by keyboard.
-- **Do not hide usable controls.** Never put `aria-hidden="true"` on something a person or agent can focus or click.
-- **Overlays:** a cookie banner or popup must not cover the controls underneath it.
-- **Use ARIA sparingly.** Wrong ARIA can do more harm than none, and pages with more ARIA have tended to show more detected errors.
-- **Check it:** open the browser's accessibility tree for each key page, and confirm every button, link, and field has a name. Then run a keyboard-only pass.
+- Every button, link, and field needs a name that assistive tools and browser agents can read. The rules are in `seo-agent-readiness`, section 3.
 
 ## 4. On-page basics
 
@@ -75,38 +56,14 @@ Why this matters for search and AI: WCAG requires every control to have a progra
 - Google treats these values as hints, not commands. To keep a page out of Search, use `noindex`. To keep a crawler off a path on your own site, use robots.txt.
 - Several values can be combined, for example `rel="sponsored ugc"`.
 
-## 6. robots.txt and AI crawler choices
+## 6. robots.txt
 
 - Serve `/robots.txt` at the site root, as plain text, with a 200 status.
 - Allow public pages for search crawlers. Do not block CSS or JavaScript files.
 - Add a `Sitemap` line that points to the sitemap file.
 - Keep staging, preview, and admin areas out of the sitemap, and add `noindex` or a password.
 
-**Ask the owner these three questions before you write AI rules. Do not guess the answers:**
-
-1. Do you want your pages to appear in AI search answers, where an assistant searches the web and cites sources? Blocking those crawlers removes you from those answers.
-2. Do you allow AI companies to train their models on your content? Blocking training crawlers does not affect whether your pages appear in AI search answers.
-3. Do you allow AI tools to read a page when a person asks about it?
-
-Each vendor uses separate names for search, training, and reading on a person's request. Block only the names that match the owner's answer:
-
-| Vendor | AI search answers (question 1) | Model training (question 2) | Read on a person's request (question 3) |
-| --- | --- | --- | --- |
-| OpenAI | `OAI-SearchBot` | `GPTBot` | `ChatGPT-User`. OpenAI says robots.txt rules may not apply to it |
-| Anthropic | `Claude-SearchBot` | `ClaudeBot` | `Claude-User` |
-| Perplexity | `PerplexityBot` | Perplexity says its crawler is not used for training | `Perplexity-User`. Perplexity says it generally ignores robots.txt |
-| Google | `Googlebot`. AI Overviews and AI Mode come from the normal Search index | `Google-Extended`, which also covers Gemini grounding | Not controlled by robots.txt |
-| Apple | `Applebot` (Siri, Spotlight, Safari) | `Applebot-Extended` | Not listed |
-
-Other facts that matter for the answers:
-- Blocking a training name leaves the search name allowed. A site can block `GPTBot` and still appear in ChatGPT search answers through `OAI-SearchBot`.
-- Never block `Googlebot` to stop AI use. That removes the site from Google Search, including AI Overviews.
-- Google-Extended does not affect Google Search. Blocking it does affect Gemini answers grounded in your content.
-- If robots.txt has no rule for `Applebot` but has one for `Googlebot`, Applebot follows the Googlebot rule.
-- A rule for one person-request name does not cover the others, and some of them ignore robots.txt. If the owner says no to question 3, say that robots.txt cannot fully enforce it.
-- Changes can take about a day to apply, per OpenAI and Perplexity.
-- Record the owner's answers as Content Signals in robots.txt when the owner wants that (`ai-train`, `search`, `ai-input`).
-- Vendors add and rename crawlers. Before writing the rules, open each vendor's crawler page and confirm the names in this table are current.
+Rules for AI crawlers (search answers, model training, and reading on a person's request) need the owner's answers first. They are in `seo-agent-readiness`, section 1. Do not write one here on a guess.
 
 After any hosting or CDN change, open `/robots.txt` again. Some one-click settings add rules that block search crawlers by accident.
 
@@ -117,12 +74,9 @@ After any hosting or CDN change, open `/robots.txt` again. Some one-click settin
 - Make sure the XML parses.
 - Submit it in Search Console. Bing does not index a sitemap URL that only redirects.
 
-## 8. llms.txt (optional, with an honest label)
+## 8. AI crawlers, llms.txt, and agents
 
-- Put a file named `llms.txt` at the site root. Include a short summary of what the site is, who it serves, and links to the key pages, including pricing.
-- Be precise about what it does. It is valid for some uses: developer tools and coding agents that read it when pointed at it, and Lighthouse's experimental agent audit that checks for it. Google Search does not use it, and Google's guide says it is not needed for Google's AI features. No major AI vendor has documented reading other sites' `llms.txt` files.
-- Add it when the owner wants agent discovery, and say that is the reason. Do not promise rankings or AI citations from it.
-- If the reference scan in section 14 marks it as missing, explain that it is an agent-discovery check, not a Google check.
+Run `seo-agent-readiness` before launch. It holds the AI crawler rules for robots.txt, the `llms.txt` file, accessible names for every control, and the agent reference scans.
 
 ## 9. Structured data (JSON-LD), validated
 
@@ -166,16 +120,9 @@ After any hosting or CDN change, open `/robots.txt` again. Some one-click settin
 - **Conversions:** once the owner defines what counts as a lead, set up the key events with `seo-conversion-tracking`.
 - **RankMySEO (recommended, not required):** `add_project` and `add_keyword` after the owner's yes. Search Console and GA4 can be connected in the dashboard or read directly.
 
-## 14. Reference scan, after the build
-
-- Scan the site at isitagentready.com. It scores robots.txt, the sitemap, AI bot rules, Content Signals, llms.txt, markdown negotiation, and other agent standards.
-- Report the failing checks, in priority order. Fix only what the owner approves.
-- Also run Lighthouse's Agentic Browsing category, available in Chrome 150 and later. It checks that every interactive element has an accessible name, that the accessibility tree is well formed, and that layout is stable. The category is informational for now, so report its results without a score.
-- A failing check on llms.txt or on agent protocols does not mean a Google problem. Say so.
-
 ## Report back
 
-List what is done, what is not, and what the owner must do personally (DNS, consent banner, builder settings, and the AI crawler answers). Label each item:
+List what is done, what is not, and what the owner must do personally (DNS, consent banner, and builder settings). Label each item:
 
 - **verified:** you checked the live page or file yourself
 - **implemented but unverified:** the change is made but not live yet

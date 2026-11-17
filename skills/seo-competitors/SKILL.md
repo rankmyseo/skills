@@ -1,6 +1,6 @@
 ---
 name: seo-competitors
-description: Find who the site actually competes with in search, benchmark against them, watch what they change, and turn the keywords and topics they win into a plan. Covers search rivals (which may differ from business rivals), keyword and content gaps, a monthly watch with alert rules, and an optional look at the ads a rival runs. Use when the owner asks who they compete with, what rivals are doing, or what topics they are missing.
+description: Find who the site actually competes with in search, benchmark against them, watch what they change, and turn the keywords and topics they win into a plan. Covers search rivals (which may differ from business rivals), keyword and content gaps, a monthly watch with alert rules, and an optional look at the ads a rival runs. Use when the owner asks who they compete with, what their rivals changed, or what topics they are missing. For how one named rival wins, use seo-reverse-engineer.
 ---
 
 # Competitors and gaps
@@ -100,4 +100,4 @@ To take apart one rival page by page, with each page's primary keyword and sub-k
 - Add a rival or a keyword without the owner's yes.
 - Call a rival's traffic exact; it is an estimate.
 - Target a rival's brand name outside a comparison page the owner approved.
-- Report a rival's ranking change as the cause of the site's drop without checking `seo-maintenance-loop` "When traffic or ranks drop".
+- Report a rival's ranking change as the cause of the site's drop without running the checks in `seo-traffic-drop`.

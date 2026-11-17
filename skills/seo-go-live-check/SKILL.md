@@ -22,11 +22,11 @@ Acceptance: the owner knows which of three states the site is in (crawling and i
 
 Also check the Search generative AI control in Search Console (Settings, then Search generative AI). It should be set to include the site. If the owner has excluded the site, say so and ask before you change it.
 
-Run the reference scan at isitagentready.com on the live homepage, and report the failing checks in priority order. Do not present an llms.txt failure as a Google problem.
+Run the reference scan at isitagentready.com on the live homepage (`seo-agent-readiness`, section 4), and report the failing checks in priority order. Do not present an llms.txt failure as a Google problem.
 
 Validate the schema on the live URLs again. Use the same two tools as in `seo-site-setup`. The target is zero errors.
 
-Check the accessibility tree on the homepage and one service page. Every button, link, and form field needs a name. Report any that have none, since a missing name blocks both assistive technology and browser agents.
+Check the accessibility tree on the homepage and one service page. Every button, link, and form field needs a name (`seo-agent-readiness`, section 3). Report any that have none, since a missing name blocks both assistive technology and browser agents.
 
 ## Days 3 to 7: data starts
 

@@ -5,6 +5,8 @@ description: Plan a new website's search strategy before it is built, for an own
 
 # SEO launch plan
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: by the end, the owner has a business brief, a keyword set that fits their business, a topical page map, and a visual site structure they can read. Each page has one job and one main keyword. Keywords the owner chose are tracked only after their yes.
 
 Acceptance: the owner can point to the page that answers each search, and say whether that search fits their business.
@@ -21,6 +23,15 @@ Skip any question the owner has answered. Every question can be skipped. Ask no 
 6. What do your customers call this? Their own words beat a marketing term.
 7. How much SEO do you know: beginner, intermediate, or expert? For a beginner, explain each step with one example. For an expert, keep it short.
 8. Do customers visit a physical place, or do you travel to them in a set area? If yes, do you want Google Business Profile connected? Ask only if they say yes to either. You connect it yourself, and I will give you the steps (`seo-local`).
+
+**Name and domain (question 5).** If the owner has no domain, or is about to choose a brand name, help them choose it before the site is built. A rename later is hard, because every mention and link points to the old name.
+
+- Pick a name people can remember and say aloud, and that no other business in the market uses. Test it: would a customer tell a friend "I use [name]"?
+- Do not build the name from the keyword, such as a domain that is just the service and the city. It reads as a description, not a brand, and customers will not recall it. A keyword in a domain is not a ranking tool, so do not offer it as one.
+- Check the name in search for other businesses with it, and check the same name is free on the social profiles the owner will use.
+- Use the same name, spelled the same way, everywhere (`seo-ai-visibility`, section 7).
+
+If the owner insists on a keyword domain, say once what it costs the brand, then do as they decide.
 
 ## 2. Write the business brief back to the owner
 
@@ -40,7 +51,7 @@ The full procedure for choosing keywords is in `seo-keyword-selection`. This sec
 RankMySEO keyword tools need a saved site.
 
 - **No saved site yet:** ask for the domain. Call `account_status` for slots, then `add_project` after the owner's yes. A guest session must call `request_link` first, and the owner opens the link.
-- **`keyword_planner`** (`project`, `q` set to a seed keyword, `country` from the brief): read it until `status` is `ready`. Use volume and difficulty only where they appear. Unknown stays unknown.
+- **`keyword_planner`** (`project`, `q` set to a seed keyword, `country` from the brief): read it until `status` is `ready`. Use volume and difficulty only where they appear. Unknown stays unknown. A seed that is not tracked yet is added to the site's tracked keywords first, and its rank check is queued. Each new seed uses a keyword slot, and the call is refused when no slot is free. Show the owner the seeds and the free slots from `account_status`, and get a yes before you call it.
 - **`research_site`:** use it once the site has content. It returns clusters from the site as it is. If no website review has run yet, the call starts one, which uses the daily research budget; ask the owner first.
 - **`keyword_gap`:** use it when the competitor is saved. It shows keywords the competitor ranks for that the site does not.
 - **City or region:** the keyword tools take a country code, not a city. City-level volume is not available. Say so, and do not guess it.
@@ -52,7 +63,7 @@ RankMySEO keyword tools need a saved site.
 
 Drop a keyword that a different kind of page answers, such as a definition for a sales site. Show the owner the drop list and the reason for each drop.
 
-Track only the keywords the owner picks. `add_keyword` runs after their yes.
+Track only the keywords the owner picks: the seeds they approved for `keyword_planner`, and any others with `add_keyword` after their yes.
 
 ## 4b. Social research, for the platforms the owner uses
 

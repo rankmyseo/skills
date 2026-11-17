@@ -5,6 +5,8 @@ description: Hand off a finished batch of new or changed pages for indexing. Run
 
 # SEO indexing handoff
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: every new public page is submitted once, in the right places, with the owner knowing exactly what was done. Status is then checked on set dates, not resubmitted in a loop.
 
 Acceptance: the owner can see which URLs went to which service, who submitted them, when, and what to check on each date.

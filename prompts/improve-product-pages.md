@@ -12,7 +12,7 @@ My shop is [site]. My best sellers are [product 1], [product 2], [product 3] (or
 1. Run site_pages and find the product and category pages, with the main keyword and how many keywords each ranks for.
 2. Run page_updates and note product pages marked tune or expand.
 3. Run search_console with days: 28 for product pages with impressions but few clicks.
-4. Run keyword_planner for each best seller's product type and poll until ready.
+4. keyword_planner for each best seller's product type. It adds each new seed to my tracked keywords and uses a keyword slot, so list the seeds and wait for my yes first. Then run it and poll until ready.
 
 Return one table: Product or category | Page | Main keyword | Volume | Position or "not ranking" | Signal | Priority (high, medium, low).
 Sort best sellers first, then by volume. Show up to 15 rows.

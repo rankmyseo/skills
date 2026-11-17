@@ -5,6 +5,8 @@ description: A focused push on the pages and keywords closest to earning more cl
 
 # SEO quick wins
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: the owner gets a short list of changes that can move clicks within weeks, a sprint that fits the time they have, and a before-and-after check once it ends.
 
 Acceptance: every sprint item has a page, a keyword, the number behind it, an effort estimate, and the date to check it.

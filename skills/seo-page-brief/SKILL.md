@@ -5,6 +5,8 @@ description: Write a content brief for one new page before it is drafted, and co
 
 # Page brief
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: the writer knows what the page must do, what it must say, and which facts are still missing, before a single sentence is drafted.
 
 Acceptance: the owner can read the brief and see the reader, the job, the outline, the facts they owe, and the next action on the page.
@@ -22,6 +24,8 @@ Write a brief for each page in the page map. A brief is one file. Do not write t
 ## 2. Set the intent
 
 State the question the page answers in the first screen. Then list the questions the reader will ask next, in the order they will ask them. Use this list to build the outline.
+
+For a RankMySEO user on Starter or above, `content_ideas` with the owner keyword returns article ideas from the keyword and top-page data already collected. It spends nothing and writes nothing. Use it to check the question list, not to replace it. For a page timed to a month (a season, a launch), `start_content_research` queues sources, angles, and the evidence each angle still needs. Read it back with `list_content_research` a few minutes later. It counts against 10 runs a day, so ask the owner first.
 
 ## 2b. Check what ranks now
 
@@ -83,6 +87,8 @@ Save it with the page map. The brief includes: the page type, the owner keyword,
 ## Hand off
 
 When the brief is complete and the required facts are in, pass it to `seo-page-rewrite` for the draft. The draft follows the brief. Any claim that is not in the brief or in the owner's answers is removed.
+
+For an informational article, the owner can instead ask RankMySEO to write the draft. See "Drafts from RankMySEO" in `seo-page-rewrite`.
 
 ## Do not
 

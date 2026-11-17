@@ -5,6 +5,8 @@ description: Turn the owner's lead definition into GA4 key events, so the site c
 
 # Conversion tracking
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: each action the owner cares about is one GA4 event, marked as a key event, and the owner can see which pages lead to it.
 
 Acceptance: the owner can read a report that shows, for each key event, the pages and channels that led to it, from the day the events were marked.

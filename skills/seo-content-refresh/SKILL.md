@@ -5,6 +5,8 @@ description: Fix pages that are losing clicks and clean up pages that earn nothi
 
 # Content refresh and cleanup
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: every slipping page has a reason and a plan, and every page that earns nothing has a decision the owner approved.
 
 Acceptance: each page in scope has one decision, one reason with its number and source, and a check date.

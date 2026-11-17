@@ -203,7 +203,7 @@ Pre-push review, 27 Oct 2026. Read calls on a real account (`search_console`, `p
 | R7-25 | `site_pages` counts only keywords RankMySEO has collected; most pages show 0 | Search Console decides whether a page earns nothing; without it, no page is called that |
 | R7-26 | `page_updates` flags a competing page with a `may_compete` reason on tune or expand rows, not only with `merge` or `split` | Quick wins, refresh, and the baseline read `reasons` |
 
-The prompt library in `prompts/` covers 11 use cases. Every prompt names its tools, asks before any write or paid lookup, and writes "not reported" for a missing number.
+The prompt library in `prompts/` covers 13 use cases. Every prompt names its tools, asks before any write or paid lookup, and writes "not reported" for a missing number.
 
 ## Decisions log
 
@@ -223,6 +223,10 @@ The prompt library in `prompts/` covers 11 use cases. Every prompt names its too
 | 26 Oct 2026 | Router renamed to `seo`, with `/seo <command>` entries. Sub-skill names keep the `seo-` prefix | "the skill slash is simple, so easy to use" | `seo`, `README` |
 | 26 Oct 2026 | Business Profile also offered to service-area businesses, not only physical places, per Google's guidelines | Not asked. Follows Google's guidelines (R6-5) | `seo-launch-plan`, question 8; `seo-indexing`; `seo-local` |
 | 27 Oct 2026 | Expand the set to the use cases in a public SEO prompt library: six new skills, nine commands, and a prompt library. Paid search use cases left out | "Let's expand all this!" | Round 7; `seo`; `prompts/` |
+| 17 Nov 2026 | Add `seo-ai-visibility` and `/seo ai`. Fix `track_ai` plan text (Starter and above, 6, 15, 30, 45 prompts; it said Agency and Scale). Add a can-the-owner-wait check to `seo-roadmap`. Sources: a public GEO teardown skill (`every-app/seo-party-skills`, MIT), a Daily SEO ID podcast with Joe Handaya, joehandaya.com. Their claims are practitioner opinion and one site's test, not studies. No vendor statistics adopted (R6-17 stands) | "cool, please also check" these links | `seo-ai-visibility`; `seo-maintenance-loop`; `seo-roadmap`; `seo`; `README` |
+| 17 Nov 2026 | Add `seo-reverse-engineer` and `/seo reverse`, adapted from the method of `reverse-engineer-seo` in `every-app/seo-party-skills` (MIT). Built on `keyword_gap`, `competitor_traffic`, and `backlink_review` only. Not adopted: AI Overview counts, link magnets by page type, and a full keyword export, since our tools do not return them | "how about skill reverse engine seo?" | `seo-reverse-engineer`; `seo-competitors`; `seo`; `README` |
+| 17 Nov 2026 | Review of all 22 skills against `apps/api/src/mcp/tools.ts`. Fixed: `keyword_planner` with a new seed tracks that keyword and uses a slot, so seven skills now ask first; the AI-answers section in `seo-maintenance-loop` points to `seo-ai-visibility` (the two gave different prompt counts); `seo-existing-site` keeps redirects at least a year, matching `seo-go-live-check` (R6-10); the router's Write row no longer overlaps the Brief row | "help me review all of our skills" | `seo`; `seo-launch-plan`; `seo-keyword-selection`; `seo-competitors`; `seo-trends`; `seo-product-pages`; `seo-ai-visibility`; `seo-maintenance-loop`; `seo-existing-site` |
+| 17 Nov 2026 | Each sub-skill now sends the agent to `seo` first, so the shared rules load on a direct pick. Two prompts added and three fixed for the `keyword_planner` tracking. README hero redrawn: four commands, a phase rail, and the approval pill; the rank line "position 11 to 6 to 3" is removed because it read as a promised ranking | "help me to do that please, also update the README, improve the design animation" | 21 sub-skills; `prompts/`; `assets/seo-hero.svg`; `README` |
 
 ## Attribution
 

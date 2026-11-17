@@ -5,6 +5,8 @@ description: Standard formats for the change log and the owner report. The chang
 
 # Reporting
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: every change to a live site is recorded, and the owner gets a short, consistent report each week or month.
 
 Acceptance: the owner can find any change by date, see why it was made, and read a report that says what moved, what did not, and what happens next.

@@ -5,6 +5,8 @@ description: Turn everything known about a site into a 90-day SEO plan the owner
 
 # 90-day roadmap
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: the owner has one page that says what will be done in the next 90 days, why, in what order, and how they will know it worked.
 
 Acceptance: each initiative has a reason with its number and source, an owner, a milestone date, and one metric; the owner has approved the plan.
@@ -22,6 +24,16 @@ Fill the gaps with read-only calls:
 - `keyword_gap` and `rank_compare`, when rivals are saved: where rivals lead.
 
 Ask the owner two things: the business goal for the quarter (leads, sales, bookings, sign-ups) and the hours per week they or their team can give.
+
+## 1b. Can the owner wait?
+
+Search pays back over months, not weeks. Before the goals, ask one question: "Can the business keep paying for this for three to six months before it brings in sales?"
+
+- If yes, go on. A small, steady monthly effort beats a large one that stops.
+- If the business needs sales this month, say so plainly. Suggest that it earn cash first through the channels that pay faster (ads, a marketplace, social, or existing customers), and set aside a fixed monthly amount for search. Do not call search the wrong choice. Call it the second channel.
+- Do not promise a payback date. A missing number is unknown.
+
+Write the answer at the top of the plan. A plan the owner cannot fund fails in the second month.
 
 ## 2. Set goals and metrics
 

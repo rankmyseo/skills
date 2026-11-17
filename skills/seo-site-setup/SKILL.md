@@ -5,6 +5,8 @@ description: Technical and on-page setup for a website that is being built or fi
 
 # SEO site setup
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: search engines and AI tools can read every public page, every page says what it is, the markup validates, and the owner can measure it from day one.
 
 Acceptance: for any public page, the owner can see the title, description, one H1, canonical link, and main text in the raw HTML. The schema validates with no errors. robots.txt matches the owner's answers.

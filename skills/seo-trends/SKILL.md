@@ -5,6 +5,8 @@ description: Find which searches are rising or falling for the site and its mark
 
 # Search demand and trends
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: the owner knows which topics are gaining or losing searches, which ones peak at a season, and which trends are worth a page.
 
 Acceptance: every trend in the plan has at least two signals with their sources and dates, fits what the business sells or knows, and has a date to publish or refresh.
@@ -25,7 +27,7 @@ Sort rising and falling queries by the absolute change in impressions, not by pe
 
 ## 2. The market's demand
 
-- `keyword_planner` on the main topics: related keywords with volume and difficulty. Poll until it is ready.
+- `keyword_planner` on the main topics: related keywords with volume and difficulty. Poll until it is ready. Each new seed is added to the site's tracked keywords and uses a slot, so ask first.
 - `research_site`: keyword clusters for the site, for topics the site does not cover yet. If no website review has run yet, the call starts one, which uses the daily research budget; ask the owner first.
 - If the agent can browse, Google Trends shows relative interest over time for a term. Otherwise ask the owner to look. It shows relative interest, not search counts.
 
@@ -57,7 +59,7 @@ Kind is rising (new and growing), seasonal (peaks at the same time each year), f
 
 ## 5. Timing
 
-- **Seasonal:** refresh or publish the page several weeks before the peak, so it can be crawled and indexed in time. Google says that for most sites, checking and indexing new or changed pages takes three days or more, and ranking can take longer. Keep the same URL each year so its history carries over.
+- **Seasonal:** refresh or publish the page several weeks before the peak, so it can be crawled and indexed in time. Google says that for most sites, checking and indexing new or changed pages takes three days or more, and ranking can take longer. Keep the same URL each year so its history carries over. For a peak month the owner confirms, `start_content_research` with that `publishMonth` (and a `context` such as the holiday) saves sources and angles. Read it with `list_content_research`. It uses the daily research budget, so ask first.
 - **Rising:** brief it now with `seo-page-brief`.
 - **Short spike:** usually skip. Write it only if the business is part of the story.
 - **Falling:** do not delete the page. Check it with `seo-content-refresh`.

@@ -5,6 +5,8 @@ description: Choose the next keywords to target, for a new website from the owne
 
 # Keyword selection
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: a short list of keywords, each with one owner page type, one reason, and a validation status. Keywords become tracked only after the owner's yes.
 
 Acceptance: the owner can read the list and say which page answers each keyword, and why that keyword fits the business.
@@ -16,7 +18,7 @@ Use the evidence that exists. For a new site, the evidence is the owner's words 
 1. **Start from the intake.** Use the product, the place, the goal, the competitor, and the customers' own words. This gives a hypothesis, not data. Say so in the plan.
 2. **Choose a primary keyword.** It is the phrase a buyer or reader would type for this product in this place. Choose by fit with the business, not by how large it sounds.
 3. **Add alternates.** Three to five other phrasings: synonyms, category names, question forms, and the competitor's name when a buyer compares.
-4. **Validate with RankMySEO.** Call `keyword_planner` with each seed (`q`), the country from the intake, and the saved `project`. The keyword tools need a saved site, so ask for the domain and add it with `add_project` after the owner's yes. Read until `status` is `ready`. Show volume and difficulty only where they appear. Unknown stays unknown.
+4. **Validate with RankMySEO.** Call `keyword_planner` with each seed (`q`), the country from the intake, and the saved `project`. The keyword tools need a saved site, so ask for the domain and add it with `add_project` after the owner's yes. Read until `status` is `ready`. Show volume and difficulty only where they appear. Unknown stays unknown. Each new seed is added to the site's tracked keywords first and uses a keyword slot, so show the owner the seed list and get a yes before you call it. When slots are short (`account_status`), check only the seeds that matter most.
 5. **Check the competitor.** Once the competitor is saved and collected, `keyword_gap` lists keywords it ranks for that the site does not. Use it to find gaps, not to copy the competitor's whole list.
 6. **Check other platforms.** For social platforms the owner uses, use `social_research` after the draft list exists. Check `social_lookups` first.
 

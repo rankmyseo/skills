@@ -39,13 +39,13 @@ Give the reading date. Rival visits are estimates; say so.
 ```text
 For my site [site], which sells [what you sell] in [country]:
 
-1. Run keyword_planner for each of these seeds: [seed 1], [seed 2], [seed 3]. Poll each one until its status is ready.
+1. keyword_planner adds each new seed to my tracked keywords and uses a keyword slot. Run account_status, tell me how many slots are free, and wait for my yes. Then run keyword_planner for each of these seeds: [seed 1], [seed 2], [seed 3]. Poll each one until its status is ready.
 2. Keep keywords that match what I sell. Drop other brands and unrelated topics.
 
 Return one table: Keyword | Volume | Difficulty | Intent (buy, compare, learn, local) | Seed.
 Sort by volume, highest first. Show up to 30 rows.
 
-Do not add any keyword. Write "not reported" for missing numbers.
+Do not add any keyword other than the seeds I approved. Write "not reported" for missing numbers.
 ```
 
 ### Step 2: Group into topics

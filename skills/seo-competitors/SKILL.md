@@ -5,6 +5,8 @@ description: Find who the site actually competes with in search, benchmark again
 
 # Competitors and gaps
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: the owner knows the three to five sites they compete with in search, where those sites are ahead, and which gaps are worth closing first.
 
 Acceptance: every gap in the plan has a keyword or topic, the rival that wins it, the number behind it, and a decision: new page, refresh an existing page, or skip.
@@ -35,6 +37,8 @@ Suggest three to five. Save them with `add_competitor` only after the owner's ye
 - `keyword_gap`: overlap and the keywords rivals rank for that the site does not.
 - `rank_compare`: on tracked keywords, which rival is ahead and by how much.
 
+Links count differently in different markets. Before you suggest link work, read the backlink figures in `competitor_traffic` for the rivals that rank above the site. If the leaders have few links, links are not what separates them, so spend the hours on the page. If they have many, say so, and offer only honest routes: the owner's real partners, press the business earns, and listings it belongs in. Never buy links.
+
 `keyword_gap` and `competitor_traffic` queue a collect for each domain not pulled yet. If they answer `queued`, ask again later instead of calling in a loop. The answer still carries the sites that are ready; use those. A rival listed in `noData`, or marked `unavailable`, gets "not reported" in the table.
 
 ## 3. Keyword gaps
@@ -48,7 +52,7 @@ Group the rest into topics. For each topic:
 
 - **Site page today:** check `site_pages`. If a page already covers the topic, the decision is refresh, not a new page.
 - **Decision:** new page (`seo-page-brief`), refresh (`seo-content-refresh`), or skip, with a one-sentence reason.
-- Use `keyword_planner` for volume and difficulty on a topic's main keyword when the gap data has none. A missing number is "not reported".
+- Use `keyword_planner` for volume and difficulty on a topic's main keyword when the gap data has none. It adds that keyword to the site's tracked keywords and uses a slot, so ask first. A missing number is "not reported".
 
 Rank topics by volume and intent, money topics first. Picking which keywords to track follows `seo-keyword-selection`.
 
@@ -88,6 +92,8 @@ This shows ad copy and offers. It does not show bids, spend, or cost per click; 
 - The top gap topics with decisions.
 - What changed this month, if this is a watch run.
 - Hand-offs: briefs to `seo-page-brief`, refreshes to `seo-content-refresh`, keywords to `seo-keyword-selection`.
+
+To take apart one rival page by page, with each page's primary keyword and sub-keywords, use `seo-reverse-engineer`.
 
 ## Do not
 

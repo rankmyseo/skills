@@ -23,7 +23,7 @@ If the results table from the previous step is in this conversation, use it. If 
 
 Run site_pages for [site]. Does any page already cover [keyword] or a close variant? If yes, recommend refreshing that page instead of a new one, and stop.
 
-If not, run keyword_planner for [keyword] and poll until ready. Return one table: Keyword | Volume | Difficulty | Use it as (main keyword, supporting, skip).
+If not, tell me that keyword_planner will add [keyword] to my tracked keywords and use a keyword slot, and wait for my yes. Then run it and poll until ready. Return one table: Keyword | Volume | Difficulty | Use it as (main keyword, supporting, skip).
 Show up to 10 rows. Write "not reported" for missing numbers.
 ```
 

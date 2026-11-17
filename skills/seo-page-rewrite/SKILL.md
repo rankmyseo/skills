@@ -5,6 +5,8 @@ description: Write or rewrite a page's title, description, headings, and body fo
 
 # SEO page rewrite
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: the page answers the search it targets, in words a reader would use, with no claim the owner cannot back up.
 
 Acceptance: the owner can read the new title, description, and first paragraph and say what the page offers and who it is for.
@@ -93,6 +95,18 @@ For each changed item, show:
 - What to check: the Search Console query or tracked keyword to watch, and the date to look again (two weekly checks later)
 
 Apply the change to the page yourself, where you can reach it. Publish live only after the owner says yes.
+
+## Drafts from RankMySEO
+
+For a new article on a RankMySEO plan (Starter and above), `write_article` queues a full draft under Content creation. Each draft uses one of the month's articles, so call it only after the owner asks for the article or says yes. Money pages and pages built on the owner's own facts stay with you.
+
+1. Call `list_articles` first. It shows this month's quota and any draft already queued for the keyword.
+2. Call `write_article` with the site, the keyword, and the brief's reader and angle. In `notes`, pass only facts the owner gave in this chat, the money page to link, and the pillar page the article supports.
+3. If the result has `existingPage`, the site already ranks for that keyword. Tell the owner. The draft takes a different angle and links to that page.
+4. The draft is ready in a few minutes. Read it with `get_article`. Do not poll in a tight loop.
+5. Treat the draft as a first draft. Fill or remove each `[Add …]` placeholder with the owner's facts, then run the checks above: title and description length, the cut list, and "Who, how, and why".
+
+Never retry a failed `write_article` on your own. A second call spends a second article.
 
 ## Other languages
 

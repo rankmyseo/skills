@@ -5,6 +5,8 @@ description: Make product and category pages for an online shop easy to find in 
 
 # Product and category pages
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: each product and category page answers what a shopper searches for, Google can read the price and stock, and variants and filters do not create a pile of duplicate URLs.
 
 Acceptance: the priority products each have a target keyword, a page that passes the checklist, valid Product markup, and a note on whether they are in a Merchant Center feed.
@@ -18,7 +20,7 @@ Then add search data:
 - `site_pages`: product and category pages with the biggest keyword each ranks for and how many keywords it ranks for.
 - `page_updates`: product pages marked `tune` or `expand` are the closest to more clicks.
 - `search_console` with `days: 28`: product pages with impressions but few clicks.
-- `keyword_planner` on product names and types: volume and difficulty.
+- `keyword_planner` on product names and types: volume and difficulty. Each new seed is added to the site's tracked keywords and uses a slot, so ask first and keep it to the priority products.
 
 Optional, costs everyday lookups: `social_research` tool `ideas` on `shopee` or `blibli` shows what shoppers type on those marketplaces, and tool `products` shows what is listed there. Ask the owner first, and run `social_lookups` first to reuse saved answers. A platform marked under maintenance answers at once and spends nothing.
 

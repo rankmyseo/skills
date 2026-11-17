@@ -5,6 +5,8 @@ description: The first-weeks checklist after a website goes live. Confirms Googl
 
 # SEO go-live check
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: in the first week, confirm the basics work. In the first month, confirm the numbers are arriving.
 
 Steps that read tracked rank need RankMySEO. If the owner does not use it, skip them and say so. Search Console and GA4 can be read directly or through RankMySEO.

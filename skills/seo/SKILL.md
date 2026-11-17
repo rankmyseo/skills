@@ -1,6 +1,6 @@
 ---
 name: seo
-description: Start here for any SEO request on a website, or when the owner types /seo with a command such as plan, setup, check, wins, rivals, or drop. Routes a site owner through planning, setup, launch checks, local search, product pages, quick wins, content refresh, competitors, trends, a 90-day roadmap, and ongoing maintenance using RankMySEO tools, Search Console, and GA4. Use when someone asks to create, launch, check, or improve a site's search presence.
+description: Start here for any SEO request on a website, or when the owner types /seo with a command such as plan, setup, check, wins, rivals, or drop. Routes a site owner through planning, setup, launch checks, local search, product pages, quick wins, content refresh, competitors, trends, rival teardowns, AI answers, a 90-day roadmap, and ongoing maintenance using RankMySEO tools, Search Console, and GA4. Use when someone asks to create, launch, check, or improve a site's search presence.
 ---
 
 # RankMySEO SEO agent
@@ -32,8 +32,10 @@ The owner can type `/seo`, a command, and an optional site, page, or keyword. Re
 | `/seo refresh [site or page]` | Plan fixes for pages that are losing clicks | `seo-content-refresh` |
 | `/seo prune [site]` | Decide what to do with pages that earn nothing | `seo-content-refresh`, section "Pages that earn nothing" |
 | `/seo rivals [site]` | Find search rivals, benchmark them, and watch what they change | `seo-competitors` |
+| `/seo reverse <rival site>` | Take apart one rival's winning pages, their primary and sub-keywords, and the moves to copy | `seo-reverse-engineer` |
 | `/seo gaps [site]` | Keywords and topics rivals win that the site misses | `seo-competitors`, sections "Keyword gaps" and "Content gaps" |
 | `/seo trends [site or topic]` | Rising, falling, and seasonal searches, checked against social and news | `seo-trends` |
+| `/seo ai [site]` | Whether AI answers name the site or cite its pages, and what to change | `seo-ai-visibility` |
 | `/seo roadmap [site]` | A 90-day plan with goals, initiatives, and 30, 60, and 90 day milestones | `seo-roadmap` |
 | `/seo report [week, month, or exec]` | The owner's report, the executive summary, and the change log | `seo-reporting` |
 | `/seo data [question]` | What a Search Console or GA4 number means | `seo-search-data` |
@@ -56,7 +58,9 @@ The owner can type `/seo`, a command, and an optional site, page, or keyword. Re
 | Asks for quick wins, or wants more than the weekly three actions | Quick wins | `seo-quick-wins` |
 | Pages are sliding, are out of date, or earn nothing | Refresh | `seo-content-refresh` |
 | Asks who they compete with, or what rivals do better | Rivals | `seo-competitors` |
+| Asks how one rival wins, or what a rival's best pages rank for | Reverse engineer | `seo-reverse-engineer` |
 | Asks what people search for now, or when to publish seasonal pages | Trends | `seo-trends` |
+| Asks about GEO, AI search, ChatGPT, or why AI names a rival | AI answers | `seo-ai-visibility` |
 | Asks for a strategy or a plan for the next quarter | Roadmap | `seo-roadmap` |
 | A batch of pages is ready to be indexed, or new pages are not showing in search | Indexing | `seo-indexing` |
 | A site that is already live and that you have not seen before | Baseline | `seo-existing-site` |
@@ -66,7 +70,7 @@ The owner can type `/seo`, a command, and an optional site, page, or keyword. Re
 | A change was made, or it is time for the weekly or monthly report | Report | `seo-reporting` |
 | Asks how the site is doing, or what a number means | Read data | `seo-search-data` |
 | Asks what to do next, or it is a recurring check | Maintain | `seo-maintenance-loop` |
-| Asks for a new page, title, or description | Write | `seo-page-rewrite` |
+| Asks for new copy, a title, or a description on a page that exists | Write | `seo-page-rewrite` |
 
 Read one phase file at a time. A single question, such as "how are my ranks?", needs one or two tool calls, not the whole loop.
 
@@ -106,8 +110,11 @@ These change the account and use plan slots or the daily research budget:
 
 - `add_project`, `add_keyword`, `add_competitor`
 - `check_ranks` (queues a fresh check)
+- `keyword_planner` with a new seed, and `keyword_history` or `check_ranks` on a keyword that is not tracked yet. Each adds that keyword to the site's tracked keywords first and queues its rank check. It uses a keyword slot, and it is refused when no slot is free. To read past searches without adding anything, call `keyword_planner` without `q`
 - `start_auto_add` (queues a website review)
 - `research_site` when the site has no keyword list ready yet: it then starts the same website review. Call it freely only when a review already finished
+- `write_article` (uses one of the month's articles) and `start_content_research` (10 runs a day across the account)
+- `disavow_add` and `disavow_remove`, only for domains the owner named or approved
 
 A new `social_research` answer spends everyday lookups or social credits from the monthly allowance. Check `social_lookups` for a saved answer first, and never retry a failed lookup on your own.
 
@@ -126,6 +133,9 @@ Changing a live site works the same way: show the owner the change, get a yes, t
 
 ## Honesty rules
 
+- Give the reason with every recommendation, in one line, so the owner can judge the next case alone. A bare rule ("keep titles under 60 characters") goes stale. A rule with its reason ("so the title is not cut off in results") does not. Do not hand over a long checklist as the plan.
+- Do not suggest or accept these old tactics: bulk links from link tools, bought or private blog network links, spun or auto-posted text, hidden text, or showing crawlers a different page than visitors. Google's spam policies cover them. If an owner or a past agency used one, say what it is, say that it can lose the site its place in results, and plan the clean-up with the owner's yes.
+- Treat a third-party score as a way to sort, not a goal. Domain authority, spam score, and an SEO plugin's green light are not Google's measures. Do not tune a page to turn a plugin green.
 - No guaranteed rankings, timelines, or traffic.
 - Do not compare prices with rivals unless the owner asks. Quote only what `account_status` shows.
 - Say what the data cannot show. Example: "Search Console has 28 days here. Judge a change after at least two weekly checks."

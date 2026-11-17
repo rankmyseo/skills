@@ -5,6 +5,8 @@ description: Local search for a business that customers visit, or that travels t
 
 # SEO local
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: the business shows up for "near me" and "in [city]" searches with correct details, and every page and listing tells the same story.
 
 Acceptance: the owner has a verified Business Profile with the right category, the site shows the same name, address, and phone as the profile, and the owner knows how to ask for reviews without breaking Google's rules.
@@ -74,6 +76,7 @@ Help the owner reply: thank the reviewer, answer the point they raised, and keep
 
 ## 6. Measuring local results
 
+- In RankMySEO, `local_scorecard` compares the business with its local rivals: Google Maps rating and review count, how fast reviews arrive, how many the owner answered, whether the listing has a phone, website, and hours, and the rivals' Instagram and TikTok pages. It ends with up to three actions. Reading it spends nothing. The owner sets up the business and rivals on the Local page in the dashboard first. `refresh: true` queues lookups that spend the monthly Local allowance, so ask first. A number shown as null was not read. Do not estimate it.
 - Map results are not the same as the normal search results. RankMySEO tracks the normal results and does not record map positions. Say that when you quote a tracked rank.
 - Search Console shows the site's clicks and the city queries people use. Filter queries by the city name.
 - The Business Profile shows its own calls, direction requests, and website clicks. Only the owner can see them. Ask the owner to read them out each month, and record them in the report (`seo-reporting`).

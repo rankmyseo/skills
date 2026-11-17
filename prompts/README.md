@@ -9,7 +9,7 @@ Each use case is a file. Each file has one or more workflows, and each workflow 
 - **They name the tools.** Every prompt says which RankMySEO tools to call, so the assistant does not guess.
 - **They name the output.** Every prompt asks for one table with set columns, a sort order, and a row limit.
 - **They chain.** A later step says: if the earlier step's table is already in this conversation, use it; if not, run that step first. You can start at any step.
-- **They read before they write.** No prompt adds a keyword, a rival, or a site, queues a rank check, or spends social lookups without asking you first.
+- **They read before they write.** No prompt adds a keyword, a rival, or a site, queues a rank check, or spends social lookups without asking you first. `keyword_planner` adds each new seed to your tracked keywords, so the prompts that use it ask first too.
 - **They do not guess.** A number the tools do not return is written as "not reported", never estimated.
 - **Thresholds are working rules.** Where a prompt uses a cut-off, such as positions 4 to 20, it is a starting point you can change, not a measured rule.
 
@@ -23,6 +23,8 @@ Most prompts need the Starter plan or above. Ask the assistant to run `account_s
 | [Spot demand trends](spot-demand-trends.md) | Rising and falling searches · Seasonal calendar | `seo-trends` |
 | [Close keyword and content gaps](close-gaps.md) | Keyword gaps · Content gaps | `seo-competitors` |
 | [Monitor competitors](monitor-competitors.md) | Monthly watch · Read a rival's ads | `seo-competitors` |
+| [Reverse-engineer a rival](reverse-engineer-a-rival.md) | Take one rival apart | `seo-reverse-engineer` |
+| [Check AI answers](check-ai-answers.md) | Read what is tracked · Find what to change | `seo-ai-visibility` |
 | [Capture quick wins](capture-quick-wins.md) | Find quick wins · Plan a two-week sprint · Measure the sprint | `seo-quick-wins` |
 | [Refresh and clean up pages](refresh-and-clean-up.md) | Refresh slipping pages · Pages that earn nothing | `seo-content-refresh` |
 | [Write briefs that fit the results](write-briefs.md) | Brief a new page | `seo-page-brief` |

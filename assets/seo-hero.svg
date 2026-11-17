@@ -1,127 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc" font-family="Inter, -apple-system, 'Segoe UI', Arial, sans-serif">
-  <title id="title">RankMySEO skills: type /seo, the agent plans, builds, publishes, then keeps checking</title>
-  <desc id="desc">An animated terminal showing /seo check returning three actions, next to a loop of plan, build, publish, and check, with climbing rank bars.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="title desc">
+  <title id="title">RankMySEO skills: type /seo, the agent does the SEO work, and you approve every change</title>
+  <desc id="desc">An animated terminal runs four commands in turn: /seo plan, /seo setup, /seo check, and /seo reverse. Each one prints three short results and then waits for the owner's yes. Beside it, a rail of four phases, Plan, Build, Check, and Grow, lights the phase that matches the command.</desc>
+  <style>
 
-  <rect width="1200" height="440" rx="20" fill="#101216"/>
+    .ui{font-family:Inter,-apple-system,'Segoe UI',Arial,sans-serif}
+    .mono{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace}
+    .scene,.ph,.cover,.cur{opacity:0}
+    .scene.c,.ph.c{opacity:1}
+    @keyframes scene{0%,24%{opacity:1}25%,100%{opacity:0}}
+    @keyframes l1{0%,7.4%{opacity:0}7.5%,100%{opacity:1}}
+    @keyframes l2{0%,9.4%{opacity:0}9.5%,100%{opacity:1}}
+    @keyframes l3{0%,11.4%{opacity:0}11.5%,100%{opacity:1}}
+    @keyframes pill{0%,56%{opacity:0;transform:translateY(8px)}62%,96%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+    @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+    @keyframes type-p{0%{transform:translateX(0)}6%,100%{transform:translateX(415.8px)}}
+    @keyframes type-b{0%{transform:translateX(0)}6%,100%{transform:translateX(277.2px)}}
+    @keyframes type-c{0%{transform:translateX(0)}6%,100%{transform:translateX(277.2px)}}
+    @keyframes type-g{0%{transform:translateX(0)}6%,100%{transform:translateX(327.6px)}}
+    @media (prefers-reduced-motion:no-preference){
+      .scene,.ph{animation:scene 24s linear infinite}
+      .cover,.cur{opacity:1}
+      .cur rect{animation:blink 1s linear infinite}
+      .l1{animation:l1 24s linear infinite}.l2{animation:l2 24s linear infinite}.l3{animation:l3 24s linear infinite}
+      .pill{animation:pill 6s ease-out infinite}
+      .p.scene,.p.ph,.p .l1,.p .l2,.p .l3{animation-delay:0s}
+      .p .cover,.p .cur{animation:type-p 24s steps(33,end) infinite;animation-delay:0s}
+      .b.scene,.b.ph,.b .l1,.b .l2,.b .l3{animation-delay:-18s}
+      .b .cover,.b .cur{animation:type-b 24s steps(22,end) infinite;animation-delay:-18s}
+      .c.scene,.c.ph,.c .l1,.c .l2,.c .l3{animation-delay:-12s}
+      .c .cover,.c .cur{animation:type-c 24s steps(22,end) infinite;animation-delay:-12s}
+      .g.scene,.g.ph,.g .l1,.g .l2,.g .l3{animation-delay:-6s}
+      .g .cover,.g .cur{animation:type-g 24s steps(26,end) infinite;animation-delay:-6s}
+    }
+  </style>
+
+  <rect width="960" height="470" rx="20" fill="#101216"/>
 
   <!-- Header -->
-  <g>
-    <rect x="40" y="34" width="14" height="34" rx="4" fill="#FF5C22">
-      <animate attributeName="height" values="34;34;34" dur="6s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="60" y="24" width="14" height="44" rx="4" fill="#FF5C22" opacity="0.75"/>
-    <rect x="80" y="14" width="14" height="54" rx="4" fill="#FF5C22" opacity="0.5"/>
-    <text x="110" y="48" font-size="30" font-weight="700" fill="#FFFFFF">RankMySEO skills</text>
-    <text x="40" y="86" font-size="17" fill="#A7ADB8">SEO for site owners who are not SEO experts. The agent does the work, you approve it.</text>
+  <g class="ui">
+    <rect x="40" y="46" width="14" height="24" rx="3" fill="#FF5C22" opacity="0.5"/>
+    <rect x="59" y="36" width="14" height="34" rx="3" fill="#FF5C22" opacity="0.75"/>
+    <rect x="78" y="26" width="14" height="44" rx="3" fill="#FF5C22"/>
+    <text x="106" y="62" font-size="30" font-weight="700" fill="#FFFFFF">RankMySEO skills</text>
+    <text x="920" y="60" font-size="18" fill="#A7ADB8" text-anchor="end">The agent does the SEO work. You approve every change.</text>
   </g>
 
   <!-- Terminal -->
-  <g>
-    <rect x="40" y="112" width="540" height="288" rx="16" fill="#171A20" stroke="#2B303A" stroke-width="1.5"/>
-    <circle cx="68" cy="138" r="6" fill="#FF5C22"/>
-    <circle cx="88" cy="138" r="6" fill="#3A3F4A"/>
-    <circle cx="108" cy="138" r="6" fill="#3A3F4A"/>
-    <text x="128" y="144" font-size="13" fill="#7C828E" font-family="ui-monospace, Menlo, Consolas, monospace">your agent</text>
+  <clipPath id="term"><rect x="41" y="97" width="558" height="332" rx="15"/></clipPath>
+  <rect x="40" y="96" width="560" height="334" rx="16" fill="#171A20" stroke="#2B303A" stroke-width="1.5"/>
+  <circle cx="66" cy="122" r="6" fill="#FF5C22"/>
+  <circle cx="86" cy="122" r="6" fill="#3A3F4A"/>
+  <circle cx="106" cy="122" r="6" fill="#3A3F4A"/>
+  <text class="mono" x="126" y="127" font-size="14" fill="#7C828E">your agent</text>
+  <line x1="40" y1="146" x2="600" y2="146" stroke="#2B303A" stroke-width="1.5"/>
+  <text class="mono" x="64" y="192" font-size="21" fill="#7C828E">&gt;</text>
 
-    <!-- typed command -->
-    <clipPath id="typeClip">
-      <rect x="64" y="158" width="0" height="30">
-        <animate attributeName="width" values="0;0;330;330;0" keyTimes="0;0.08;0.38;0.92;1" dur="9s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-    <text x="64" y="182" font-size="19" fill="#FFFFFF" font-family="ui-monospace, Menlo, Consolas, monospace" clip-path="url(#typeClip)">/seo check example.com</text>
-    <rect x="324" y="164" width="10" height="20" fill="#FF5C22">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-    </rect>
-
-    <!-- results -->
-    <g font-size="16.5" fill="#D7DBE2" font-family="ui-monospace, Menlo, Consolas, monospace">
-      <g opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.40;0.48;0.92;1" dur="9s" repeatCount="indefinite"/>
-        <text x="64" y="226" fill="#FF8A5C">1.</text>
-        <text x="92" y="226">Rewrite the title on /pricing</text>
-      </g>
-      <g opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.50;0.58;0.92;1" dur="9s" repeatCount="indefinite"/>
-        <text x="64" y="256" fill="#FF8A5C">2.</text>
-        <text x="92" y="256">Fix one template H1, 14 pages</text>
-      </g>
-      <g opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.60;0.68;0.92;1" dur="9s" repeatCount="indefinite"/>
-        <text x="64" y="286" fill="#FF8A5C">3.</text>
-        <text x="92" y="286">Brief: rank tracker for agencies</text>
-      </g>
+  <g clip-path="url(#term)">
+    <g class="scene p">
+      <text class="mono" x="90" y="192" font-size="21" fill="#FFFFFF" textLength="415.8" lengthAdjust="spacing">/seo plan a site for dog groomers</text>
+      <rect class="cover" x="90" y="168" width="700" height="34" fill="#171A20"/>
+      <g class="cur"><rect x="92" y="172" width="11" height="24" fill="#FF5C22"/></g>
+      <g class="mono l1" font-size="18"><text x="64" y="242" fill="#FF8A5C">brief</text><text x="176" y="242" fill="#D7DBE2">confirmed with you</text></g>
+      <g class="mono l2" font-size="18"><text x="64" y="278" fill="#FF8A5C">keywords</text><text x="176" y="278" fill="#D7DBE2">checked against real demand</text></g>
+      <g class="mono l3" font-size="18"><text x="64" y="314" fill="#FF8A5C">pages</text><text x="176" y="314" fill="#D7DBE2">one keyword per page</text></g>
     </g>
-
-    <!-- climbing bars -->
-    <g>
-      <line x1="64" y1="356" x2="330" y2="356" stroke="#2B303A" stroke-width="2"/>
-      <rect x="76" width="30" rx="4" fill="#3A3F4A">
-        <animate attributeName="y" values="338;338;338" dur="9s" repeatCount="indefinite"/>
-        <animate attributeName="height" values="18;18;18" dur="9s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="122" width="30" rx="4" fill="#565E6C">
-        <animate attributeName="y" values="356;326;326;326;356" keyTimes="0;0.45;0.6;0.92;1" dur="9s" repeatCount="indefinite"/>
-        <animate attributeName="height" values="0;30;30;30;0" keyTimes="0;0.45;0.6;0.92;1" dur="9s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="168" width="30" rx="4" fill="#8A8F98">
-        <animate attributeName="y" values="356;316;316;316;356" keyTimes="0;0.55;0.7;0.92;1" dur="9s" repeatCount="indefinite"/>
-        <animate attributeName="height" values="0;40;40;40;0" keyTimes="0;0.55;0.7;0.92;1" dur="9s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="214" width="30" rx="4" fill="#FF5C22">
-        <animate attributeName="y" values="356;304;304;304;356" keyTimes="0;0.65;0.8;0.92;1" dur="9s" repeatCount="indefinite"/>
-        <animate attributeName="height" values="0;52;52;52;0" keyTimes="0;0.65;0.8;0.92;1" dur="9s" repeatCount="indefinite"/>
-      </rect>
-      <text x="262" y="330" font-size="15" fill="#A7ADB8">tracked rank, kept as history</text>
-      <text x="262" y="352" font-size="15" fill="#FF8A5C">position 11 &#8594; 6 &#8594; 3</text>
+    <g class="scene b">
+      <text class="mono" x="90" y="192" font-size="21" fill="#FFFFFF" textLength="277.2" lengthAdjust="spacing">/seo setup example.com</text>
+      <rect class="cover" x="90" y="168" width="700" height="34" fill="#171A20"/>
+      <g class="cur"><rect x="92" y="172" width="11" height="24" fill="#FF5C22"/></g>
+      <g class="mono l1" font-size="18"><text x="64" y="242" fill="#FF8A5C">html</text><text x="176" y="242" fill="#D7DBE2">title, H1, canonical per page</text></g>
+      <g class="mono l2" font-size="18"><text x="64" y="278" fill="#FF8A5C">schema</text><text x="176" y="278" fill="#D7DBE2">validates with zero errors</text></g>
+      <g class="mono l3" font-size="18"><text x="64" y="314" fill="#FF8A5C">robots</text><text x="176" y="314" fill="#D7DBE2">three questions for you first</text></g>
     </g>
-
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.72;0.8;0.92;1" dur="9s" repeatCount="indefinite"/>
-      <rect x="380" y="316" width="176" height="34" rx="17" fill="#FF5C22"/>
-      <text x="468" y="339" font-size="15" font-weight="600" fill="#101216" text-anchor="middle">Waiting for your yes</text>
+    <g class="scene c">
+      <text class="mono" x="90" y="192" font-size="21" fill="#FFFFFF" textLength="277.2" lengthAdjust="spacing">/seo check example.com</text>
+      <rect class="cover" x="90" y="168" width="700" height="34" fill="#171A20"/>
+      <g class="cur"><rect x="92" y="172" width="11" height="24" fill="#FF5C22"/></g>
+      <g class="mono l1" font-size="18"><text x="64" y="242" fill="#FF8A5C">1</text><text x="96" y="242" fill="#D7DBE2">Rewrite the title on /pricing</text></g>
+      <g class="mono l2" font-size="18"><text x="64" y="278" fill="#FF8A5C">2</text><text x="96" y="278" fill="#D7DBE2">Fix one template H1, 14 pages</text></g>
+      <g class="mono l3" font-size="18"><text x="64" y="314" fill="#FF8A5C">3</text><text x="96" y="314" fill="#D7DBE2">Brief: dog grooming prices in Austin</text></g>
+    </g>
+    <g class="scene g">
+      <text class="mono" x="90" y="192" font-size="21" fill="#FFFFFF" textLength="327.6" lengthAdjust="spacing">/seo reverse rival.example</text>
+      <rect class="cover" x="90" y="168" width="700" height="34" fill="#171A20"/>
+      <g class="cur"><rect x="92" y="172" width="11" height="24" fill="#FF5C22"/></g>
+      <g class="mono l1" font-size="18"><text x="64" y="242" fill="#FF8A5C">page</text><text x="176" y="242" fill="#D7DBE2">/prices/ wins the most keywords</text></g>
+      <g class="mono l2" font-size="18"><text x="64" y="278" fill="#FF8A5C">primary</text><text x="176" y="278" fill="#D7DBE2">&#8220;dog grooming prices&#8221; and 4 more</text></g>
+      <g class="mono l3" font-size="18"><text x="64" y="314" fill="#FF8A5C">move</text><text x="176" y="314" fill="#D7DBE2">publish your real price list first</text></g>
     </g>
   </g>
 
-  <!-- Lifecycle loop -->
-  <g>
-    <path id="loopPath" d="M 880,128 a 118,118 0 1,1 -0.01,0" fill="none" stroke="#2B303A" stroke-width="2.5" stroke-dasharray="7 9"/>
-    <circle r="9" fill="#FF5C22">
-      <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
-        <mpath href="#loopPath"/>
-      </animateMotion>
-    </circle>
+  <g class="ui pill">
+    <rect x="64" y="356" width="232" height="40" rx="20" fill="#FF5C22"/>
+    <text x="180" y="382" font-size="16" font-weight="700" fill="#101216" text-anchor="middle">Waiting for your yes</text>
+    <text x="314" y="382" font-size="15" fill="#A7ADB8">Nothing goes live before it.</text>
+  </g>
 
-    <g text-anchor="middle" font-size="16" font-weight="600">
-      <g>
-        <circle cx="880" cy="128" r="27" fill="#171A20" stroke="#FF5C22" stroke-width="2">
-          <animate attributeName="r" values="27;31;27" dur="2s" begin="0s" repeatCount="indefinite"/>
-        </circle>
-        <text x="880" y="94" fill="#FFFFFF">Plan</text>
-        <text x="880" y="72" font-size="13" font-weight="400" fill="#7C828E">research first</text>
-      </g>
-      <g>
-        <circle cx="998" cy="246" r="27" fill="#171A20" stroke="#FF5C22" stroke-width="2">
-          <animate attributeName="r" values="27;31;27" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-        </circle>
-        <text x="1052" y="240" fill="#FFFFFF">Build</text>
-        <text x="1052" y="262" font-size="13" font-weight="400" fill="#7C828E">pages + setup</text>
-      </g>
-      <g>
-        <circle cx="880" cy="364" r="27" fill="#171A20" stroke="#FF5C22" stroke-width="2">
-          <animate attributeName="r" values="27;31;27" dur="2s" begin="1s" repeatCount="indefinite"/>
-        </circle>
-        <text x="880" y="418" fill="#FFFFFF">Publish</text>
-      </g>
-      <g>
-        <circle cx="762" cy="246" r="27" fill="#171A20" stroke="#FF5C22" stroke-width="2">
-          <animate attributeName="r" values="27;31;27" dur="2s" begin="1.5s" repeatCount="indefinite"/>
-        </circle>
-        <text x="700" y="240" fill="#FFFFFF">Check</text>
-        <text x="700" y="262" font-size="13" font-weight="400" fill="#7C828E">weekly</text>
-      </g>
-    </g>
-    <text x="880" y="240" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">then keep</text>
-    <text x="880" y="264" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">improving</text>
+  <!-- Phase rail -->
+  <g class="ui">
+    <line x1="664" y1="136" x2="664" y2="370" stroke="#2B303A" stroke-width="2"/>
+    <path d="M 650 370 C 620 370 620 292 645 292" fill="none" stroke="#565E6C" stroke-width="2" stroke-dasharray="5 6"/>
+    <path d="M 636 285 L 646 292 L 636 299" fill="none" stroke="#565E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="664" cy="136" r="11" fill="#171A20" stroke="#3A3F4A" stroke-width="2"/>
+    <text x="696" y="143" font-size="20" font-weight="700" fill="#A7ADB8">Plan</text>
+    <text x="696" y="167" font-size="15" fill="#7C828E">research before building</text>
+    <g class="ph p"><circle cx="664" cy="136" r="18" fill="#FF5C22" opacity="0.22"/><circle cx="664" cy="136" r="11" fill="#FF5C22"/><text x="696" y="143" font-size="20" font-weight="700" fill="#FFFFFF">Plan</text><text x="696" y="167" font-size="15" fill="#D7DBE2">research before building</text></g>
+    <circle cx="664" cy="214" r="11" fill="#171A20" stroke="#3A3F4A" stroke-width="2"/>
+    <text x="696" y="221" font-size="20" font-weight="700" fill="#A7ADB8">Build</text>
+    <text x="696" y="245" font-size="15" fill="#7C828E">pages, setup, tracking</text>
+    <g class="ph b"><circle cx="664" cy="214" r="18" fill="#FF5C22" opacity="0.22"/><circle cx="664" cy="214" r="11" fill="#FF5C22"/><text x="696" y="221" font-size="20" font-weight="700" fill="#FFFFFF">Build</text><text x="696" y="245" font-size="15" fill="#D7DBE2">pages, setup, tracking</text></g>
+    <circle cx="664" cy="292" r="11" fill="#171A20" stroke="#3A3F4A" stroke-width="2"/>
+    <text x="696" y="299" font-size="20" font-weight="700" fill="#A7ADB8">Check</text>
+    <text x="696" y="323" font-size="15" fill="#7C828E">every week: three actions</text>
+    <g class="ph c"><circle cx="664" cy="292" r="18" fill="#FF5C22" opacity="0.22"/><circle cx="664" cy="292" r="11" fill="#FF5C22"/><text x="696" y="299" font-size="20" font-weight="700" fill="#FFFFFF">Check</text><text x="696" y="323" font-size="15" fill="#D7DBE2">every week: three actions</text></g>
+    <circle cx="664" cy="370" r="11" fill="#171A20" stroke="#3A3F4A" stroke-width="2"/>
+    <text x="696" y="377" font-size="20" font-weight="700" fill="#A7ADB8">Grow</text>
+    <text x="696" y="401" font-size="15" fill="#7C828E">sprints, rivals, AI answers</text>
+    <g class="ph g"><circle cx="664" cy="370" r="18" fill="#FF5C22" opacity="0.22"/><circle cx="664" cy="370" r="11" fill="#FF5C22"/><text x="696" y="377" font-size="20" font-weight="700" fill="#FFFFFF">Grow</text><text x="696" y="401" font-size="15" fill="#D7DBE2">sprints, rivals, AI answers</text></g>
   </g>
 </svg>

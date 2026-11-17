@@ -5,6 +5,8 @@ description: Baseline audit for a website that is already live. Builds a page in
 
 # Existing site baseline
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: by the end, the owner knows every public page on the site, what each one does for search, and what to do with it. Nothing changes until the owner approves the decisions.
 
 Acceptance: every URL in the inventory has one decision and one reason, and the owner has approved the list.
@@ -58,7 +60,7 @@ For each group, name the page that should own the keyword, and make the others m
 
 - Map each old URL to one new URL. Do not map to the homepage unless the topic is the homepage.
 - Use 301 (permanent) redirects. Avoid chains: old, then intermediate, then new.
-- Keep the old URLs in the redirect file until Search Console shows no traffic to them for several weeks.
+- Keep each redirect for at least a year, as Google advises. Do not remove one because its traffic stopped.
 - Update internal links to point at the new URL, so the redirect is a fallback, not the route.
 - Remove the old URLs from the sitemap once they redirect.
 - For a domain move, use Search Console's Change of Address tool, and read Google's move guidance before you change anything.

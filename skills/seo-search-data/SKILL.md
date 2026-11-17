@@ -5,6 +5,8 @@ description: How to read Search Console and GA4 numbers, directly or through Ran
 
 # SEO search data
 
+Read `seo` first if you have not read it in this session. Its rules for account writes, guest keys, and reading results apply here.
+
 Goal: give the owner one true sentence about what changed and why it might matter, with the source named.
 
 Acceptance: every number you quote has a source (Search Console, GA4, or tracked rank), a window in days, and a note on whether it is a total or an average.

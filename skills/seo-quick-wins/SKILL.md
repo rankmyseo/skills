@@ -1,6 +1,6 @@
 ---
 name: seo-quick-wins
-description: A sprint of up to ten changes on pages that are close to earning more clicks: keywords at positions 4 to 20, and pages shown often but rarely clicked. Ranks them by impact and effort, plans the sprint with the owner, and compares before and after. Use when the owner asks for quick wins, or has time for more than the weekly three actions. Pages that are losing clicks go to seo-content-refresh.
+description: A sprint of up to ten changes on pages that are close to earning more clicks, which means keywords at positions 4 to 20 and pages shown often but rarely clicked. Ranks them by impact and effort, plans the sprint with the owner, and compares before and after. Use when the owner asks for quick wins, or has time for more than the weekly three actions. Pages that are losing clicks go to seo-content-refresh.
 ---
 
 # SEO quick wins
